@@ -3,11 +3,32 @@ import java.io.File;
 
 
 class manageMent{
-  Scanner libraryScanner = new Scanner(new File("books.txt"));
-  Scanner userScanner = new Scanner(new File("users.txt"));
+  String libraryString = "";
+  String usersString = "";
   manageMent{
-    
+    try (Scanner libraryScanner = new Scanner(new File("books.txt"));) { //
+        while (fileScanner.hasNextLine()) { //
+            String data = fileScanner.nextLine(); //
+            fileStringy += data;
+            fileStringy += "\n";
+        }
+    } catch (FileNotFoundException e) {
+        System.out.println("An error occurred: File not found.");
+        e.printStackTrace();
+    }}
+
+  try (Scanner userScanner = new Scanner(new File("users.txt"));) { //
+        while (fileScanner.hasNextLine()) { //
+            String data = fileScanner.nextLine(); //
+            fileStringy += data;
+            fileStringy += "\n";
+        }
+    } catch (FileNotFoundException e) {
+        System.out.println("An error occurred: File not found.");
+        e.printStackTrace();
+    }}
   }
+
   void readBookList(){}
   
   void readUserList(){}
