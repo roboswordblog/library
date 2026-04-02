@@ -37,4 +37,7 @@ class manageMent {
     void readUserList() {
         System.out.println(usersString);
     }
+    void addUser(){}
+    
+    String getUserData(){return "Placeholder";}
 }
