@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 
 class Main {
+    static int function = 0;
     static void home(){
         JFrame window = new JFrame("LibApp");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -196,6 +197,15 @@ class Main {
         window.setVisible(true);
     }
     public static void main(String[] args) {
-        signup();
+        if (function == 0){
+            home();
+        }
+        if (function == 1){
+            login();
+        }
+        if (function == 2){
+            signup();
+        }
+        
     }
 }
