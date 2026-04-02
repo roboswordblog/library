@@ -63,8 +63,8 @@ class Main {
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
-    static void login(){
-        JFrame window = new JFrame("LibApp Login");
+    static void signup(){
+        JFrame window = new JFrame("LibApp Signup");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(800, 600);
         window.setLocationRelativeTo(null);
@@ -129,7 +129,73 @@ class Main {
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
+    static void login(){
+        JFrame window = new JFrame("LibApp Login");
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setSize(800, 600);
+        window.setLocationRelativeTo(null);
+        window.setResizable(false);
+        window.setLayout(null);
+        JLabel title = new JLabel();
+        title.setText("Lib App");
+        title.setFont(new Font("Serif", Font.BOLD, 75));
+        title.setForeground(new Color(255, 255, 255));
+        title.setBounds(275, 30, 300, 100);
+        JLabel subtitle = new JLabel();
+        subtitle.setText("Login");
+        subtitle.setFont(new Font("Serif", Font.PLAIN, 30));
+        subtitle.setForeground(new Color(255, 255, 255));
+        subtitle.setBounds(340, 105, 350, 100);
+
+        JTextField username = new JTextField("Username");
+        username.setSize(300, 50);
+        username.setLocation(265, 225);
+        username.setBackground(new Color(50, 50, 50)); // dark gray
+        username.setForeground(Color.WHITE);          // white text
+        username.setCaretColor(Color.WHITE);          // caret color
+        username.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
+        username.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
+
+        window.add(username);
+        window.getContentPane().setBackground(new Color(30, 30, 30));
+        JTextField password = new JTextField("Password");
+        password.setSize(300, 50);
+        password.setLocation(265, 300);
+        password.setBackground(new Color(50, 50, 50)); // dark gray
+        password.setForeground(Color.WHITE);          // white text
+        password.setCaretColor(Color.WHITE);          // caret color
+        password.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
+        password.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
+
+        window.add(password);
+
+
+        JButton loginButton = new JButton("Login");
+        loginButton.setBounds(350, 400, 100, 45);
+
+        loginButton.setForeground(Color.WHITE);
+        loginButton.setFocusPainted(false);
+        loginButton.setBorderPainted(false);
+        loginButton.setContentAreaFilled(true);
+        loginButton.setOpaque(true);
+        loginButton.setBackground(new Color(0, 122, 255));
+        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                loginButton.setBackground(new Color(10, 140, 255));
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                loginButton.setBackground(new Color(0, 122, 255));
+            }
+        });
+        window.add(title);
+        window.add(subtitle);
+        window.add(loginButton);
+
+        window.getContentPane().setBackground(new Color(18, 18, 20));
+        window.setVisible(true);
+    }
     public static void main(String[] args) {
-        login();
+        signup();
     }
 }
