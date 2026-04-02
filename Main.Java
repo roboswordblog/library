@@ -249,23 +249,49 @@ class Main {
             landing();          // open login screen
         });
 
-        JTextField search = new JTextField("Username");
-        search.setSize(300, 50);
-        search.setLocation(400, 20);
-        search.setBackground(new Color(50, 50, 50)); // dark gray
+        JTextField search = new JTextField("Search");
+        search.setSize(200, 50);
+        search.setLocation(300, 50);
+        search.setBackground(new Color(50, 50, 50));
         search.setForeground(Color.WHITE);          // white text
         search.setCaretColor(Color.WHITE);          // caret color
         search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
         search.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
 
+
+        JButton searchButton = new JButton("Search");
+        searchButton.setBounds(500, 50, 100, 50);
+
+        searchButton.setForeground(Color.WHITE);
+        searchButton.setFocusPainted(false);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(true);
+        searchButton.setOpaque(true);
+        searchButton.setBackground(new Color(10, 140, 255));
+
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                searchButton.setBackground(new Color(10, 140, 255));
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                searchButton.setBackground(new Color(231, 76, 60));
+            }
+        });
+        logoutButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            landing();          // open login screen
+        });
+
         window.add(title);
         window.add(logoutButton);
         window.add(search);
+        window.add(searchButton);
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
 
     public static void main(String[] args) {
-    landing();
+        landing();
     }
 }
