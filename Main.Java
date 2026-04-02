@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 
 class Main {
-    static int function = 0;
     static void landing(){
         JFrame window = new JFrame("LibApp");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -221,14 +220,10 @@ class Main {
         window.setLayout(null);
         JLabel title = new JLabel();
         title.setText("Lib App");
-        title.setFont(new Font("Serif", Font.BOLD, 75));
+        title.setFont(new Font("Serif", Font.BOLD, 30));
         title.setForeground(new Color(255, 255, 255));
-        title.setBounds(275, 30, 300, 100);
-        JLabel subtitle = new JLabel();
-        subtitle.setText("ALL OTHER ONES ARE BAD COMPARED TO THIS ONE-ALBERT EINSTIEN");
-        subtitle.setFont(new Font("Serif", Font.ITALIC, 10));
-        subtitle.setForeground(new Color(255, 255, 255));
-        subtitle.setBounds(250, 105, 500, 100);
+        title.setBounds(30, 30, 300, 100);
+
 
         JButton logoutButton = new JButton("Logout");
         logoutButton.setBounds(650, 50, 100, 50);
@@ -253,9 +248,19 @@ class Main {
             window.dispose(); // close current window
             landing();          // open login screen
         });
+
+        JTextField search = new JTextField("Username");
+        search.setSize(300, 50);
+        search.setLocation(400, 20);
+        search.setBackground(new Color(50, 50, 50)); // dark gray
+        search.setForeground(Color.WHITE);          // white text
+        search.setCaretColor(Color.WHITE);          // caret color
+        search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
+        search.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
+
         window.add(title);
-        window.add(subtitle);
         window.add(logoutButton);
+        window.add(search);
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
