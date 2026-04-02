@@ -38,6 +38,11 @@ class Main {
                 loginButton.setBackground(new Color(0, 122, 255));
             }
         });
+        loginButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            login();          // open login screen
+        });
+
         JButton signupButton = new JButton("Signup");
         signupButton.setForeground(Color.WHITE);
         signupButton.setFocusPainted(false);
@@ -55,7 +60,10 @@ class Main {
                 signupButton.setBackground(new Color(70, 220, 130));
             }
         });
-
+        signupButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            signup();          // open login screen
+        });
         window.add(title);
         window.add(subtitle);
         window.add(loginButton);
@@ -189,6 +197,7 @@ class Main {
                 loginButton.setBackground(new Color(0, 122, 255));
             }
         });
+
         window.add(title);
         window.add(subtitle);
         window.add(loginButton);
@@ -197,15 +206,7 @@ class Main {
         window.setVisible(true);
     }
     public static void main(String[] args) {
-        if (function == 0){
-            home();
-        }
-        if (function == 1){
-            login();
-        }
-        if (function == 2){
-            signup();
-        }
-        
+  home();
+
     }
 }
