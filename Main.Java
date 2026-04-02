@@ -76,21 +76,33 @@ class Main {
         title.setForeground(new Color(255, 255, 255));
         title.setBounds(275, 30, 300, 100);
         JLabel subtitle = new JLabel();
-        subtitle.setText("The best library app there is.-Someone Very Smart");
-        subtitle.setFont(new Font("Serif", Font.ITALIC, 15));
+        subtitle.setText("Sign Up");
+        subtitle.setFont(new Font("Serif", Font.PLAIN, 30));
         subtitle.setForeground(new Color(255, 255, 255));
-        subtitle.setBounds(250, 105, 350, 100);
+        subtitle.setBounds(340, 105, 350, 100);
 
         JTextField username = new JTextField("Username");
         username.setSize(300, 50);
-        username.setLocation(50, 5);
+        username.setLocation(265, 225);
         username.setBackground(new Color(50, 50, 50)); // dark gray
         username.setForeground(Color.WHITE);          // white text
         username.setCaretColor(Color.WHITE);          // caret color
         username.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
         username.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
+
         window.add(username);
         window.getContentPane().setBackground(new Color(30, 30, 30));
+        JTextField password = new JTextField("Password");
+        password.setSize(300, 50);
+        password.setLocation(265, 300);
+        password.setBackground(new Color(50, 50, 50)); // dark gray
+        password.setForeground(Color.WHITE);          // white text
+        password.setCaretColor(Color.WHITE);          // caret color
+        password.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
+        password.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
+
+        window.add(password);
+
 
         JButton signupButton = new JButton("Signup");
         signupButton.setForeground(Color.WHITE);
@@ -98,7 +110,7 @@ class Main {
         signupButton.setBorderPainted(false);
         signupButton.setContentAreaFilled(true);
         signupButton.setOpaque(true);
-      //  signupButton.setBounds(400, 200, 100, 45);
+        signupButton.setBounds(350, 400, 100, 45);
         signupButton.setBackground(new Color(46, 204, 113));
         signupButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
