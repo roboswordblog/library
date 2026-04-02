@@ -3,7 +3,7 @@ import java.awt.*;
 
 class Main {
     static int function = 0;
-    static void home(){
+    static void landing(){
         JFrame window = new JFrame("LibApp");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(800, 600);
@@ -130,7 +130,10 @@ class Main {
                 signupButton.setBackground(new Color(70, 220, 130));
             }
         });
-
+        signupButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            home();          // open login screen
+        });
         window.add(title);
         window.add(subtitle);
         window.add(signupButton);
@@ -197,7 +200,10 @@ class Main {
                 loginButton.setBackground(new Color(0, 122, 255));
             }
         });
-
+        loginButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            home();          // open login screen
+        });
         window.add(title);
         window.add(subtitle);
         window.add(loginButton);
@@ -205,8 +211,56 @@ class Main {
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
-    public static void main(String[] args) {
-  home();
 
+    static void home(){
+        JFrame window = new JFrame("LibApp Login");
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setSize(800, 600);
+        window.setLocationRelativeTo(null);
+        window.setResizable(false);
+        window.setLayout(null);
+        JLabel title = new JLabel();
+        title.setText("Lib App");
+        title.setFont(new Font("Serif", Font.BOLD, 75));
+        title.setForeground(new Color(255, 255, 255));
+        title.setBounds(275, 30, 300, 100);
+        JLabel subtitle = new JLabel();
+        subtitle.setText("ALL OTHER ONES ARE BAD COMPARED TO THIS ONE-ALBERT EINSTIEN");
+        subtitle.setFont(new Font("Serif", Font.ITALIC, 10));
+        subtitle.setForeground(new Color(255, 255, 255));
+        subtitle.setBounds(250, 105, 500, 100);
+
+        JButton logoutButton = new JButton("Logout");
+        logoutButton.setBounds(650, 50, 100, 50);
+
+        logoutButton.setForeground(Color.WHITE);
+        logoutButton.setFocusPainted(false);
+        logoutButton.setBorderPainted(false);
+        logoutButton.setContentAreaFilled(true);
+        logoutButton.setOpaque(true);
+        logoutButton.setBackground(new Color(231, 76, 60));
+
+        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                logoutButton.setBackground(new Color(255, 99, 71));
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                logoutButton.setBackground(new Color(231, 76, 60));
+            }
+        });
+        logoutButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            landing();          // open login screen
+        });
+        window.add(title);
+        window.add(subtitle);
+        window.add(logoutButton);
+        window.getContentPane().setBackground(new Color(18, 18, 20));
+        window.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+    landing();
     }
 }
