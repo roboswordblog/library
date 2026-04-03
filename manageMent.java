@@ -38,6 +38,21 @@ class manageMent {
         System.out.println(usersString);
     }
     void addUser(){}
-    
-    String getUserData(){return "Placeholder";}
+
+    String getUserData(){
+        return "Placeholder";
+    }
+
+    boolean passwordCorrect(String username, String password){
+        String[] lines = usersString.split("\n");
+        for (String item : lines) {
+            String[] formatted = item.split(",");
+            if (formatted[0].equals(username)){
+                if (formatted[1].equals(password)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
