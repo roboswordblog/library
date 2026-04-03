@@ -365,12 +365,8 @@ class Main {
         logoutButton.setBackground(new Color(231, 76, 60));
 
         logoutButton.addMouseListener(new MouseAdapter() {
-            public void mouseEntered(MouseEvent evt) {
-                logoutButton.setBackground(new Color(255, 99, 71));
-            }
-            public void mouseExited(MouseEvent evt) {
-                logoutButton.setBackground(new Color(231, 76, 60));
-            }
+            public void mouseEntered(MouseEvent evt) { logoutButton.setBackground(new Color(255, 99, 71)); }
+            public void mouseExited(MouseEvent evt) { logoutButton.setBackground(new Color(231, 76, 60)); }
         });
 
         logoutButton.addActionListener(e -> {
@@ -397,12 +393,8 @@ class Main {
         searchButton.setBackground(new Color(10, 140, 255));
 
         searchButton.addMouseListener(new MouseAdapter() {
-            public void mouseEntered(MouseEvent evt) {
-                searchButton.setBackground(new Color(100, 130, 255));
-            }
-            public void mouseExited(MouseEvent evt) {
-                searchButton.setBackground(new Color(10, 140, 255));
-            }
+            public void mouseEntered(MouseEvent evt) { searchButton.setBackground(new Color(100, 130, 255)); }
+            public void mouseExited(MouseEvent evt) { searchButton.setBackground(new Color(10, 140, 255)); }
         });
 
         searchButton.addActionListener(e -> {
@@ -416,29 +408,69 @@ class Main {
         resultsPanel.setBackground(new Color(18, 18, 20));
 
         for (String[] item : dataManage.findBooks(keywords)) {
-            JPanel bookPanel = new JPanel();
-            bookPanel.setLayout(new BoxLayout(bookPanel, BoxLayout.Y_AXIS));
-            bookPanel.setBackground(new Color(18, 18, 20));
-            bookPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+            // 🔹 Row container (horizontal layout)
+            JPanel row = new JPanel();
+            row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
+            row.setBackground(new Color(18, 18, 20));
+            row.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+            // 🔹 Text panel (title + description)
+            JPanel textPanel = new JPanel();
+            textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.Y_AXIS));
+            textPanel.setBackground(new Color(18, 18, 20));
 
             JLabel book = new JLabel(item[0]);
-            book.setFont(new Font("Consolas", Font.BOLD, 15));
+            book.setFont(new Font("Consolas", Font.BOLD, 16));
             book.setForeground(Color.WHITE);
 
             JLabel description = new JLabel(item[1]);
-            description.setFont(new Font("Consolas", Font.ITALIC, 15));
+            description.setFont(new Font("Consolas", Font.PLAIN, 13));
             description.setForeground(Color.LIGHT_GRAY);
 
-            bookPanel.add(book);
-            bookPanel.add(description);
+            textPanel.add(book);
+            textPanel.add(description);
 
-            resultsPanel.add(bookPanel);
+            // 🔹 Get button
+            boolean available = dataManage.bookOpen(item[0]);
+            JButton get = new JButton(available ? "Get" : "Unavailable");
+            get.setMaximumSize(new Dimension(120, 40)); // fixed width & height
+            get.setFocusPainted(false);
+            get.setBorderPainted(false);
+            get.setContentAreaFilled(true);
+            get.setOpaque(true);
+            get.setForeground(Color.WHITE);
+            get.setBackground(available ? new Color(46, 204, 113) : new Color(60, 80, 70));
+            get.setEnabled(available);
+
+            // Hover effect
+            get.addMouseListener(new MouseAdapter() {
+                public void mouseEntered(MouseEvent evt) { if (available) get.setBackground(new Color(39, 174, 96)); }
+                public void mouseExited(MouseEvent evt) { if (available) get.setBackground(new Color(46, 204, 113)); }
+            });
+
+            // Click action
+            get.addActionListener(e -> {
+                // dataManage.checkoutBook(item[0]); // implement this in manageMent
+                window.dispose();
+                searchPage(keywords);
+            });
+
+            // 🔹 Add components to row
+            row.add(textPanel);
+            row.add(Box.createHorizontalGlue()); // pushes button to the right
+            row.add(get);
+
+            // 🔹 Add row to results
+            resultsPanel.add(row);
+            resultsPanel.add(Box.createRigidArea(new Dimension(0, 10))); // spacing between rows
         }
 
         JScrollPane scrollPane = new JScrollPane(resultsPanel);
         scrollPane.setBounds(50, 150, 700, 350);
         scrollPane.setBorder(null);
         scrollPane.getVerticalScrollBar().setUnitIncrement(10);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
         // ADD COMPONENTS
         window.add(title);
