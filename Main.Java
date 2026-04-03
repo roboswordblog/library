@@ -224,6 +224,17 @@ class Main {
         title.setForeground(new Color(255, 255, 255));
         title.setBounds(30, 30, 300, 100);
 
+        JLabel holdLabel = new JLabel();
+        holdLabel.setText("Holds");
+        holdLabel.setFont(new Font("Serif", Font.PLAIN, 25));
+        holdLabel.setForeground(new Color(255, 255, 255));
+        holdLabel.setBounds(130, 150, 300, 100);
+        JLabel haveLabel = new JLabel();
+        haveLabel.setText("Checked Out");
+        haveLabel.setFont(new Font("Serif", Font.PLAIN, 25));
+        haveLabel.setForeground(new Color(255, 255, 255));
+        haveLabel.setBounds(430, 150, 300, 100);
+
 
         JButton logoutButton = new JButton("Logout");
         logoutButton.setBounds(650, 50, 100, 50);
@@ -271,11 +282,96 @@ class Main {
 
         searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                searchButton.setBackground(new Color(10, 140, 255));
+                searchButton.setBackground(new Color(100, 130, 255));
             }
 
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                searchButton.setBackground(new Color(231, 76, 60));
+                searchButton.setBackground(new Color(10, 140, 255));
+            }
+        });
+        logoutButton.addActionListener(e -> {
+            window.dispose();
+            landing();
+        });
+        searchButton.addActionListener(e -> {
+            window.dispose();
+            searchPage();
+        });
+
+        window.add(title);
+        window.add(logoutButton);
+        window.add(search);
+        window.add(searchButton);
+        window.add(holdLabel);
+        window.add(haveLabel);
+        window.getContentPane().setBackground(new Color(18, 18, 20));
+        window.setVisible(true);
+    }
+    static void searchPage(){
+        JFrame window = new JFrame("LibApp Login");
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setSize(800, 600);
+        window.setLocationRelativeTo(null);
+        window.setResizable(false);
+        window.setLayout(null);
+        JLabel title = new JLabel();
+        title.setText("Lib App");
+        title.setFont(new Font("Serif", Font.BOLD, 30));
+        title.setForeground(new Color(255, 255, 255));
+        title.setBounds(30, 30, 300, 100);
+
+
+        JButton logoutButton = new JButton("Logout");
+        logoutButton.setBounds(650, 50, 100, 50);
+
+        logoutButton.setForeground(Color.WHITE);
+        logoutButton.setFocusPainted(false);
+        logoutButton.setBorderPainted(false);
+        logoutButton.setContentAreaFilled(true);
+        logoutButton.setOpaque(true);
+        logoutButton.setBackground(new Color(231, 76, 60));
+
+        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                logoutButton.setBackground(new Color(255, 99, 71));
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                logoutButton.setBackground(new Color(231, 76, 60));
+            }
+        });
+        logoutButton.addActionListener(e -> {
+            window.dispose(); // close current window
+            landing();          // open login screen
+        });
+
+        JTextField search = new JTextField("Search");
+        search.setSize(200, 50);
+        search.setLocation(300, 50);
+        search.setBackground(new Color(50, 50, 50));
+        search.setForeground(Color.WHITE);          // white text
+        search.setCaretColor(Color.WHITE);          // caret color
+        search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
+        search.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
+
+
+        JButton searchButton = new JButton("Search");
+        searchButton.setBounds(500, 50, 100, 50);
+
+        searchButton.setForeground(Color.WHITE);
+        searchButton.setFocusPainted(false);
+        searchButton.setBorderPainted(false);
+        searchButton.setContentAreaFilled(true);
+        searchButton.setOpaque(true);
+        searchButton.setBackground(new Color(10, 140, 255));
+
+        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                searchButton.setBackground(new Color(100, 130, 255));
+            }
+
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                searchButton.setBackground(new Color(10, 140, 255));
             }
         });
         logoutButton.addActionListener(e -> {
