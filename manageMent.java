@@ -37,7 +37,11 @@ class manageMent {
     void readUserList() {
         System.out.println(usersString);
     }
-    void addUser(){}
+
+    void addUser(String username, String password) throws IOException {
+        Files.writeString(Path.of("users.txt"), usersString+username+","+password);
+    }
+    
 
     String getUserData(){
         return "Placeholder";
