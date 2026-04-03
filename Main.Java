@@ -342,22 +342,21 @@ class Main {
         window.setVisible(true);
     }
     static void searchPage(String keywords){
-        JFrame window = new JFrame("LibApp Login");
+        JFrame window = new JFrame("LibApp Search");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(800, 600);
         window.setLocationRelativeTo(null);
         window.setResizable(false);
         window.setLayout(null);
+
         JLabel title = new JLabel();
         title.setText("Lib App");
         title.setFont(new Font("Serif", Font.BOLD, 30));
-        title.setForeground(new Color(255, 255, 255));
+        title.setForeground(Color.WHITE);
         title.setBounds(30, 30, 300, 100);
-
 
         JButton logoutButton = new JButton("Logout");
         logoutButton.setBounds(650, 50, 100, 50);
-
         logoutButton.setForeground(Color.WHITE);
         logoutButton.setFocusPainted(false);
         logoutButton.setBorderPainted(false);
@@ -369,29 +368,27 @@ class Main {
             public void mouseEntered(MouseEvent evt) {
                 logoutButton.setBackground(new Color(255, 99, 71));
             }
-
             public void mouseExited(MouseEvent evt) {
                 logoutButton.setBackground(new Color(231, 76, 60));
             }
         });
+
         logoutButton.addActionListener(e -> {
-            window.dispose(); // close current window
-            landing();          // open login screen
+            window.dispose();
+            landing();
         });
 
         JTextField search = new JTextField("Search");
         search.setSize(200, 50);
         search.setLocation(300, 50);
         search.setBackground(new Color(50, 50, 50));
-        search.setForeground(Color.WHITE);          // white text
-        search.setCaretColor(Color.WHITE);          // caret color
-        search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
-        search.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
-
+        search.setForeground(Color.WHITE);
+        search.setCaretColor(Color.WHITE);
+        search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70)));
+        search.setFont(new Font("Consolas", Font.PLAIN, 14));
 
         JButton searchButton = new JButton("Search");
         searchButton.setBounds(500, 50, 100, 50);
-
         searchButton.setForeground(Color.WHITE);
         searchButton.setFocusPainted(false);
         searchButton.setBorderPainted(false);
@@ -403,37 +400,53 @@ class Main {
             public void mouseEntered(MouseEvent evt) {
                 searchButton.setBackground(new Color(100, 130, 255));
             }
-
             public void mouseExited(MouseEvent evt) {
                 searchButton.setBackground(new Color(10, 140, 255));
             }
         });
-        logoutButton.addActionListener(e -> {
-            window.dispose(); // close current window
-            landing();          // open login screen
+
+        searchButton.addActionListener(e -> {
+            window.dispose();
+            searchPage(search.getText());
         });
-        ArrayList<JLabel> checkedLabels = new ArrayList<>();
-        int y = 225;
+
+        // 🔥 SCROLLABLE RESULTS PANEL
+        JPanel resultsPanel = new JPanel();
+        resultsPanel.setLayout(new BoxLayout(resultsPanel, BoxLayout.Y_AXIS));
+        resultsPanel.setBackground(new Color(18, 18, 20));
+
         for (String[] item : dataManage.findBooks(keywords)) {
+            JPanel bookPanel = new JPanel();
+            bookPanel.setLayout(new BoxLayout(bookPanel, BoxLayout.Y_AXIS));
+            bookPanel.setBackground(new Color(18, 18, 20));
+            bookPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
             JLabel book = new JLabel(item[0]);
             book.setFont(new Font("Consolas", Font.BOLD, 15));
-            book.setForeground(new Color(255, 255, 255));
-            book.setBounds(430, y, 300, 100);
-            checkedLabels.add(book);
+            book.setForeground(Color.WHITE);
+
             JLabel description = new JLabel(item[1]);
             description.setFont(new Font("Consolas", Font.ITALIC, 15));
-            description.setForeground(new Color(255, 255, 255));
-            description.setBounds(230, y+25, 300, 100);
-            checkedLabels.add(description);
-            y += 75;
+            description.setForeground(Color.LIGHT_GRAY);
+
+            bookPanel.add(book);
+            bookPanel.add(description);
+
+            resultsPanel.add(bookPanel);
         }
-        for (JLabel item : checkedLabels) {
-            window.add(item);
-        }
+
+        JScrollPane scrollPane = new JScrollPane(resultsPanel);
+        scrollPane.setBounds(50, 150, 700, 350);
+        scrollPane.setBorder(null);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(10);
+
+        // ADD COMPONENTS
         window.add(title);
         window.add(logoutButton);
         window.add(search);
         window.add(searchButton);
+        window.add(scrollPane);
+
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
