@@ -327,7 +327,7 @@ class Main {
         });
         searchButton.addActionListener(e -> {
             window.dispose();
-            searchPage();
+            searchPage(search.getText());
         });
         for (JLabel item : checkedLabels) {
             window.add(item);
@@ -341,7 +341,7 @@ class Main {
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
-    static void searchPage(){
+    static void searchPage(String keywords){
         JFrame window = new JFrame("LibApp Login");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(800, 600);
@@ -412,7 +412,24 @@ class Main {
             window.dispose(); // close current window
             landing();          // open login screen
         });
-
+        ArrayList<JLabel> checkedLabels = new ArrayList<>();
+        int y = 225;
+        for (String[] item : dataManage.findBooks(keywords)) {
+            JLabel book = new JLabel(item[0]);
+            book.setFont(new Font("Consolas", Font.BOLD, 15));
+            book.setForeground(new Color(255, 255, 255));
+            book.setBounds(430, y, 300, 100);
+            checkedLabels.add(book);
+            JLabel description = new JLabel(item[1]);
+            description.setFont(new Font("Consolas", Font.ITALIC, 15));
+            description.setForeground(new Color(255, 255, 255));
+            description.setBounds(230, y+25, 300, 100);
+            checkedLabels.add(description);
+            y += 75;
+        }
+        for (JLabel item : checkedLabels) {
+            window.add(item);
+        }
         window.add(title);
         window.add(logoutButton);
         window.add(search);
