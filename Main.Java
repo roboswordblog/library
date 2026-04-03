@@ -1,7 +1,10 @@
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 class Main {
+    static manageMent dataManage = new manageMent();
+    static String user;
     static void landing(){
         JFrame window = new JFrame("LibApp");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -130,7 +133,13 @@ class Main {
             }
         });
         signupButton.addActionListener(e -> {
-            window.dispose(); // close current window
+            window.dispose();// close current window
+            try {
+                dataManage.addUser(username.getText(), password.getText());
+            } catch (IOException ex) {
+                System.out.println("So like the file thing for adding went wrong and failed, dont blame it on the owner of the company, blame it on the devs");
+            }
+            user = username.getText();
             home();          // open login screen
         });
         window.add(title);
@@ -201,7 +210,13 @@ class Main {
         });
         loginButton.addActionListener(e -> {
             window.dispose(); // close current window
-            home();          // open login screen
+            if (dataManage.passwordCorrect(username.getText(), password.getText())){
+                user = username.getText();
+                home();
+            }
+            else{
+                login();
+            }          // open login screen
         });
         window.add(title);
         window.add(subtitle);
