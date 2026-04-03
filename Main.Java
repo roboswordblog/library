@@ -1,6 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
+import java.util.ArrayList;
 
 class Main {
     static manageMent dataManage = new manageMent();
@@ -31,12 +34,12 @@ class Main {
         loginButton.setContentAreaFilled(true);
         loginButton.setOpaque(true);
         loginButton.setBackground(new Color(0, 122, 255));
-        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        loginButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 loginButton.setBackground(new Color(10, 140, 255));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 loginButton.setBackground(new Color(0, 122, 255));
             }
         });
@@ -53,12 +56,12 @@ class Main {
         signupButton.setOpaque(true);
         signupButton.setBounds(400, 200, 100, 45);
         signupButton.setBackground(new Color(46, 204, 113));
-        signupButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        signupButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 signupButton.setBackground(new Color(46, 204, 113));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 signupButton.setBackground(new Color(70, 220, 130));
             }
         });
@@ -123,12 +126,12 @@ class Main {
         signupButton.setOpaque(true);
         signupButton.setBounds(350, 400, 100, 45);
         signupButton.setBackground(new Color(46, 204, 113));
-        signupButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        signupButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 signupButton.setBackground(new Color(46, 204, 113));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 signupButton.setBackground(new Color(70, 220, 130));
             }
         });
@@ -199,12 +202,12 @@ class Main {
         loginButton.setContentAreaFilled(true);
         loginButton.setOpaque(true);
         loginButton.setBackground(new Color(0, 122, 255));
-        loginButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        loginButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 loginButton.setBackground(new Color(10, 140, 255));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 loginButton.setBackground(new Color(0, 122, 255));
             }
         });
@@ -241,15 +244,29 @@ class Main {
 
         JLabel holdLabel = new JLabel();
         holdLabel.setText("Holds");
-        holdLabel.setFont(new Font("Serif", Font.PLAIN, 25));
+        holdLabel.setFont(new Font("Consolas", Font.PLAIN, 25));
         holdLabel.setForeground(new Color(255, 255, 255));
         holdLabel.setBounds(130, 150, 300, 100);
         JLabel haveLabel = new JLabel();
         haveLabel.setText("Checked Out");
-        haveLabel.setFont(new Font("Serif", Font.PLAIN, 25));
+        haveLabel.setFont(new Font("Consolas", Font.PLAIN, 25));
         haveLabel.setForeground(new Color(255, 255, 255));
         haveLabel.setBounds(430, 150, 300, 100);
-
+        ArrayList<JLabel> checkedLabels = new ArrayList<>();
+        int y = 225;
+        for (String[] item : dataManage.getallBooks(user)) {
+            JLabel book = new JLabel(item[0]);
+            book.setFont(new Font("Consolas", Font.BOLD, 15));
+            book.setForeground(new Color(255, 255, 255));
+            book.setBounds(430, y, 300, 100);
+            checkedLabels.add(book);
+            JLabel description = new JLabel(item[1]);
+            description.setFont(new Font("Consolas", Font.ITALIC, 15));
+            description.setForeground(new Color(255, 255, 255));
+            description.setBounds(430, y+25, 300, 100);
+            checkedLabels.add(description);
+            y += 75;
+        }
 
         JButton logoutButton = new JButton("Logout");
         logoutButton.setBounds(650, 50, 100, 50);
@@ -261,12 +278,12 @@ class Main {
         logoutButton.setOpaque(true);
         logoutButton.setBackground(new Color(231, 76, 60));
 
-        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        logoutButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 logoutButton.setBackground(new Color(255, 99, 71));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 logoutButton.setBackground(new Color(231, 76, 60));
             }
         });
@@ -295,12 +312,12 @@ class Main {
         searchButton.setOpaque(true);
         searchButton.setBackground(new Color(10, 140, 255));
 
-        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        searchButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 searchButton.setBackground(new Color(100, 130, 255));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 searchButton.setBackground(new Color(10, 140, 255));
             }
         });
@@ -312,7 +329,9 @@ class Main {
             window.dispose();
             searchPage();
         });
-
+        for (JLabel item : checkedLabels) {
+            window.add(item);
+        }
         window.add(title);
         window.add(logoutButton);
         window.add(search);
@@ -346,12 +365,12 @@ class Main {
         logoutButton.setOpaque(true);
         logoutButton.setBackground(new Color(231, 76, 60));
 
-        logoutButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        logoutButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 logoutButton.setBackground(new Color(255, 99, 71));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 logoutButton.setBackground(new Color(231, 76, 60));
             }
         });
@@ -380,12 +399,12 @@ class Main {
         searchButton.setOpaque(true);
         searchButton.setBackground(new Color(10, 140, 255));
 
-        searchButton.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
+        searchButton.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
                 searchButton.setBackground(new Color(100, 130, 255));
             }
 
-            public void mouseExited(java.awt.event.MouseEvent evt) {
+            public void mouseExited(MouseEvent evt) {
                 searchButton.setBackground(new Color(10, 140, 255));
             }
         });
