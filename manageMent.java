@@ -1,79 +1,48 @@
-import java.io.IOException;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-class manageMent {
-    String libraryString = "";
-    String usersString = "";
+ArrayList<String[]> findBooks(String searchedup){
+        String[] stopwords = {"a", "an", "the", "and", "but", "or", "for", "nor", "on", "at",
+                "with", "of", "by", "from", "to", "under", "i", "me", "my",
+                "you", "your", "he", "she", "it", "they", "we", "is", "am",
+                "are", "was", "were", "be", "being", "been", "do", "does", "did",
+                "which", "who", "whom", "this", "that", "these", "those"};
 
-    // Constructor
-    manageMent() {
-
-        // Read books.txt
-        try (Scanner libraryScanner = new Scanner(new File("books.txt"))) {
-            while (libraryScanner.hasNextLine()) {
-                String data = libraryScanner.nextLine();
-                libraryString += data + "\n";
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("Books file not found.");
+        // Convert stopwords to HashSet (faster lookup)
+        java.util.HashSet<String> stopSet = new java.util.HashSet<>();
+        for (String word : stopwords) {
+            stopSet.add(word);
         }
 
-        // Read users.txt
-        try (Scanner userScanner = new Scanner(new File("users.txt"))) {
-            while (userScanner.hasNextLine()) {
-                String data = userScanner.nextLine();
-                usersString += data + "\n";
+        // 🔹 Clean search input (remove stopwords)
+        String[] searchWords = searchedup.toLowerCase().split("\\W+");
+        ArrayList<String> filteredSearch = new ArrayList<>();
+
+        for (String word : searchWords) {
+            if (!stopSet.contains(word)) {
+                filteredSearch.add(word);
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Users file not found.");
         }
-    }
 
-    void readBookList() {
-        System.out.println(libraryString);
-    }
+        ArrayList<String[]> results = new ArrayList<>();
+        String[] lines = libraryString.split("\n");
 
-    void readUserList() {
-        System.out.println(usersString);
-    }
-    void addUser(String username, String password) throws IOException {
-        Files.writeString(Path.of("users.txt"), usersString+username+","+password);
-    }
-
-    String getUserData(){
-        return "Placeholder";
-    }
-
-    boolean passwordCorrect(String username, String password){
-        String[] lines = usersString.split("\n");
+        // 🔹 Search through books
         for (String item : lines) {
             String[] formatted = item.split(",");
-            if (formatted[0].equals(username)){
-                if (formatted[1].equals(password)){
-                    System.out.println("GOT IT");
-                    return true;
+
+            if (formatted.length >= 2) {
+                String title = formatted[0].toLowerCase();
+                String author = formatted[1].toLowerCase();
+
+                // Check if ANY filtered word matches
+                for (String word : filteredSearch) {
+                    if (title.contains(word) || author.contains(word)) {
+                        results.add(new String[]{formatted[0], formatted[1]});
+                        break; // avoid duplicates
+                    }
                 }
             }
         }
-        return false;
+
+        return results;
     }
-    ArrayList<String[]> getallBooks(String username){
-        ArrayList<String[]> books = new ArrayList<>();
 
-        String[] lines = libraryString.split("\n");
-
-        for (String item : lines) {
-            String[] formatted = item.split(",");
-
-            if (formatted.length >= 3 && formatted[2].equals(username)) {
-                books.add(new String[]{formatted[0], formatted[1]});
-            }
-        }
-
-        return books;
-    }
 }
