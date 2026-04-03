@@ -349,12 +349,32 @@ class Main {
         window.setResizable(false);
         window.setLayout(null);
 
-        JLabel title = new JLabel();
-        title.setText("Lib App");
+        JButton title = new JButton("Lib App");
         title.setFont(new Font("Serif", Font.BOLD, 30));
         title.setForeground(Color.WHITE);
         title.setBounds(30, 30, 300, 100);
 
+// Make it look like plain text
+        title.setContentAreaFilled(false);  // no background
+        title.setBorderPainted(false);      // no border
+        title.setFocusPainted(false);       // no focus outline
+        title.setCursor(new Cursor(Cursor.HAND_CURSOR)); // shows hand cursor on hover
+
+// Optional: hover effect (slightly brighter text)
+        title.addMouseListener(new MouseAdapter() {
+            public void mouseEntered(MouseEvent evt) {
+                title.setForeground(new Color(200, 200, 255)); // light highlight
+            }
+            public void mouseExited(MouseEvent evt) {
+                title.setForeground(Color.WHITE);
+            }
+        });
+
+// Click action to go home
+        title.addActionListener(e -> {
+            window.dispose(); // close current window
+            home();           // go to home page
+        });
         JButton logoutButton = new JButton("Logout");
         logoutButton.setBounds(650, 50, 100, 50);
         logoutButton.setForeground(Color.WHITE);
