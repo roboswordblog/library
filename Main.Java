@@ -230,47 +230,107 @@ class Main {
     }
 
     static void home(){
-        JFrame window = new JFrame("LibApp Login");
+        JFrame window = new JFrame("LibApp Home");
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setSize(800, 600);
         window.setLocationRelativeTo(null);
         window.setResizable(false);
         window.setLayout(null);
-        JLabel title = new JLabel();
-        title.setText("Lib App");
+
+        // 🔹 Title
+        JLabel title = new JLabel("Lib App");
         title.setFont(new Font("Serif", Font.BOLD, 30));
-        title.setForeground(new Color(255, 255, 255));
+        title.setForeground(Color.WHITE);
         title.setBounds(30, 30, 300, 100);
 
-        JLabel holdLabel = new JLabel();
-        holdLabel.setText("Holds");
-        holdLabel.setFont(new Font("Consolas", Font.PLAIN, 25));
-        holdLabel.setForeground(new Color(255, 255, 255));
-        holdLabel.setBounds(130, 150, 300, 100);
-        JLabel haveLabel = new JLabel();
-        haveLabel.setText("Checked Out");
-        haveLabel.setFont(new Font("Consolas", Font.PLAIN, 25));
-        haveLabel.setForeground(new Color(255, 255, 255));
-        haveLabel.setBounds(430, 150, 300, 100);
-        ArrayList<JLabel> checkedLabels = new ArrayList<>();
-        int y = 225;
+        // 🔹 Checked Out Label (CENTERED)
+        JLabel checkedLabel = new JLabel("Checked Out", SwingConstants.CENTER);
+        checkedLabel.setFont(new Font("Consolas", Font.BOLD, 25));
+        checkedLabel.setForeground(Color.WHITE);
+        checkedLabel.setBounds(250, 120, 300, 50);
+
+        // 🔥 PANEL FOR BOOKS (SCROLLABLE)
+        JPanel booksPanel = new JPanel();
+        booksPanel.setLayout(new BoxLayout(booksPanel, BoxLayout.Y_AXIS));
+        booksPanel.setBackground(new Color(18, 18, 20));
+
         for (String[] item : dataManage.getallBooks(user)) {
+
+            // 🔹 Row container (horizontal like search page)
+            JPanel row = new JPanel();
+            row.setLayout(new BoxLayout(row, BoxLayout.X_AXIS));
+            row.setBackground(new Color(18, 18, 20));
+            row.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+            // 🔹 Text panel
+            JPanel textPanel = new JPanel();
+            textPanel.setLayout(new BoxLayout(textPanel, BoxLayout.Y_AXIS));
+            textPanel.setBackground(new Color(18, 18, 20));
+
             JLabel book = new JLabel(item[0]);
-            book.setFont(new Font("Consolas", Font.BOLD, 15));
-            book.setForeground(new Color(255, 255, 255));
-            book.setBounds(430, y, 300, 100);
-            checkedLabels.add(book);
+            book.setFont(new Font("Consolas", Font.BOLD, 16));
+            book.setForeground(Color.WHITE);
+
             JLabel description = new JLabel(item[1]);
-            description.setFont(new Font("Consolas", Font.ITALIC, 15));
-            description.setForeground(new Color(255, 255, 255));
-            description.setBounds(430, y+25, 300, 100);
-            checkedLabels.add(description);
-            y += 75;
+            description.setFont(new Font("Consolas", Font.PLAIN, 13));
+            description.setForeground(Color.LIGHT_GRAY);
+
+            textPanel.add(book);
+            textPanel.add(description);
+
+            // 🔥 RETURN BUTTON
+            JButton returnBtn = new JButton("Return");
+            returnBtn.setMaximumSize(new Dimension(120, 40));
+            returnBtn.setFocusPainted(false);
+            returnBtn.setBorderPainted(false);
+            returnBtn.setContentAreaFilled(true);
+            returnBtn.setOpaque(true);
+            returnBtn.setForeground(Color.WHITE);
+
+            // 🎨 Red styling (since it's "return")
+            returnBtn.setBackground(new Color(231, 76, 60));
+
+            // 🔥 Hover effect
+            returnBtn.addMouseListener(new MouseAdapter() {
+                public void mouseEntered(MouseEvent evt) {
+                    returnBtn.setBackground(new Color(255, 99, 71));
+                }
+                public void mouseExited(MouseEvent evt) {
+                    returnBtn.setBackground(new Color(231, 76, 60));
+                }
+            });
+
+            // 🔥 CLICK ACTION
+            returnBtn.addActionListener(e -> {
+                try {
+                    dataManage.changeBookOwner(item[0], "None"); // return book
+                } catch (IOException ex) {
+                    System.out.println("Return failed");
+                }
+                window.dispose();
+                home(); // refresh page
+            });
+
+            // 🔹 Add everything to row
+            row.add(textPanel);
+            row.add(Box.createHorizontalGlue()); // pushes button right
+            row.add(returnBtn);
+
+ 
+            booksPanel.add(row);
+            booksPanel.add(Box.createRigidArea(new Dimension(0, 10)));
         }
+
+
+        JScrollPane scrollPane = new JScrollPane(booksPanel);
+        scrollPane.setBounds(150, 180, 500, 300); // centered box
+        scrollPane.setBorder(null);
+        scrollPane.getVerticalScrollBar().setUnitIncrement(10);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+
 
         JButton logoutButton = new JButton("Logout");
         logoutButton.setBounds(650, 50, 100, 50);
-
         logoutButton.setForeground(Color.WHITE);
         logoutButton.setFocusPainted(false);
         logoutButton.setBorderPainted(false);
@@ -282,29 +342,28 @@ class Main {
             public void mouseEntered(MouseEvent evt) {
                 logoutButton.setBackground(new Color(255, 99, 71));
             }
-
             public void mouseExited(MouseEvent evt) {
                 logoutButton.setBackground(new Color(231, 76, 60));
             }
         });
+
         logoutButton.addActionListener(e -> {
-            window.dispose(); // close current window
-            landing();          // open login screen
+            window.dispose();
+            landing();
         });
 
+        // 🔹 Search bar
         JTextField search = new JTextField("Search");
         search.setSize(200, 50);
         search.setLocation(300, 50);
         search.setBackground(new Color(50, 50, 50));
-        search.setForeground(Color.WHITE);          // white text
-        search.setCaretColor(Color.WHITE);          // caret color
-        search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70))); // subtle border
-        search.setFont(new Font("Consolas", Font.PLAIN, 14)); // IDE-style font
-
+        search.setForeground(Color.WHITE);
+        search.setCaretColor(Color.WHITE);
+        search.setBorder(BorderFactory.createLineBorder(new Color(70, 70, 70)));
+        search.setFont(new Font("Consolas", Font.PLAIN, 14));
 
         JButton searchButton = new JButton("Search");
         searchButton.setBounds(500, 50, 100, 50);
-
         searchButton.setForeground(Color.WHITE);
         searchButton.setFocusPainted(false);
         searchButton.setBorderPainted(false);
@@ -316,28 +375,24 @@ class Main {
             public void mouseEntered(MouseEvent evt) {
                 searchButton.setBackground(new Color(100, 130, 255));
             }
-
             public void mouseExited(MouseEvent evt) {
                 searchButton.setBackground(new Color(10, 140, 255));
             }
         });
-        logoutButton.addActionListener(e -> {
-            window.dispose();
-            landing();
-        });
+
         searchButton.addActionListener(e -> {
             window.dispose();
             searchPage(search.getText());
         });
-        for (JLabel item : checkedLabels) {
-            window.add(item);
-        }
+
+        // 🔹 Add everything
         window.add(title);
+        window.add(checkedLabel);
+        window.add(scrollPane);
         window.add(logoutButton);
         window.add(search);
         window.add(searchButton);
-        window.add(holdLabel);
-        window.add(haveLabel);
+
         window.getContentPane().setBackground(new Color(18, 18, 20));
         window.setVisible(true);
     }
