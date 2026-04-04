@@ -1,10 +1,10 @@
-How to Eat Breakfast,This is a detailed guide on how to eat breakfast,Username
-How to Eat Lunch,This is a detailed guide on how to eat lunch,Username
+How to Eat Breakfast,This is a detailed guide on how to eat breakfast,None
+How to Eat Lunch,This is a detailed guide on how to eat lunch,None
 Cookie,A potato farm,None
 How to Drink Water,This is a detailed guide on how to drink water,None
 How to Tie Shoes,This is a detailed guide on how to tie shoes,None
 How to Brush Teeth,This is a detailed guide on how to brush teeth,None
-How to Read a Book,This is a detailed guide on how to read a book,None
+How to Read a Book,This is a detailed guide on how to read a book,Robosword
 How to Write Notes,This is a detailed guide on how to write notes,None
 How to Study Better,This is a detailed guide on how to study better,None
 How to Clean Your Room,This is a detailed guide on how to clean your room,None
@@ -13,7 +13,7 @@ How to Use a Computer,This is a detailed guide on how to use a computer,None
 How to Type Faster,This is a detailed guide on how to type faster,None
 How to Build a Habit,This is a detailed guide on how to build a habit,None
 How to Stay Focused,This is a detailed guide on how to stay focused,None
-How to Wake Up Early,This is a detailed guide on how to wake up early,None
+How to Wake Up Early,This is a detailed guide on how to wake up early,Robosword
 How to Go to Sleep,This is a detailed guide on how to go to sleep,None
 How to Exercise Daily,This is a detailed guide on how to exercise daily,None
 How to Stretch Properly,This is a detailed guide on how to stretch properly,None
@@ -51,3 +51,644 @@ How to Manage Time,This is a detailed guide on how to manage time,None
 How to Set Goals,This is a detailed guide on how to set goals,None
 How to Achieve Goals,This is a detailed guide on how to achieve goals,None
 How to Stay Motivated,This is a detailed guide on how to stay motivated,None
+Cookie,Not just a snack—this cookie recipe might make your friends jealous,None
+The Morning Boost,A guide to starting your day energized and happy,None
+Water: The Essential Guide,Everything you need to know about staying hydrated,None
+Mastering Knots,From shoelaces to climbing ropes, learn the art of knots
+The Perfect Smile,Secrets to brushing and flossing like a pro,None
+Reading Adventures,Explore worlds beyond imagination through books,Robosword
+Notes That Stick,Creative strategies for remembering everything you write,None
+Study Like a Champ,Fun and effective ways to retain knowledge,None
+The Tidy Room,Turn cleaning into a satisfying and rewarding habit,None
+Desk Zen,Organize your workspace to boost focus and creativity,None
+Tech Made Simple,Learn essential computer skills without frustration,None
+Typing Mastery,Boost your speed and accuracy in a playful way,None
+Daily Habits,Simple routines that lead to big changes,None
+Focus Power,Train your mind to concentrate like a pro,None
+Rise and Shine,Wake up with energy and positivity,Robosword
+Sleep Well,Nighttime routines for restful and rejuvenating sleep,None
+Kitchen Wizardry,Fun recipes that turn cooking into an adventure,None
+Coffee Chronicles,Discover the art of brewing the perfect cup,None
+Money Smarts,Practical tips to save and spend wisely,None
+Efficient Walking,Secrets to walking faster and feeling lighter,None
+Travel Light,Pack smarter and move freely on your journeys,None
+Confidence Boost,Build self-esteem and present yourself boldly,None
+Teamwork Tales,Learn to collaborate and lead in groups,None
+Friendship 101,Tips for making friends and keeping them,None
+Creative Problem Solving,Think outside the box and tackle challenges,None
+Mind Calm,Techniques to relax, meditate
+Time Management Magic,Organize your hours to get more done,None
+Goal Setting Secrets,Set clear goals and achieve them effectively,None
+Exercise Made Fun,Daily routines that energize your body,None
+Stretching Guide,Simple exercises to keep your body flexible,None
+Pasta Perfection,Master the art of cooking pasta like an Italian,None
+Rice Made Easy,Step-by-step guide to perfectly cooked rice,None
+Baking Adventures,From bread to pastries, enjoy the process
+Laundry Made Simple,Quick tips to wash, dry
+Phone Savvy,Master your smartphone and apps like a pro,None
+Social Media Sense,Use platforms wisely and stay safe,None
+Confidence in Speech,Communicate clearly and confidently,None
+Listening Skills,Become an attentive and effective listener,None
+Python for Beginners,A complete introduction to Python programming from scratch,None
+Mastering Python,Object-oriented programming and advanced Python techniques,None
+Python Projects,Fun Python projects to practice your coding skills,None
+Python Algorithms,Implement algorithms efficiently using Python,None
+Python Data Science,Learn data analysis, visualization
+Python for Web Development,Build web apps using Flask and Django,None
+Java Basics,A beginner's guide to Java programming,None
+Advanced Java,Learn Java OOP, streams
+Java Projects,Hands-on Java projects for practice,None
+Java Algorithms,Implement common algorithms in Java,None
+Java Data Structures,Learn arrays, lists
+C++ Fundamentals,A complete guide to C++ programming,None
+C++ Advanced,Templates, pointers
+C++ Projects,Practice building real-world applications in C++,None
+JavaScript Essentials,A beginner's guide to JS and DOM manipulation,None
+JavaScript Projects,Build interactive web apps with JavaScript,None
+HTML & CSS for Beginners,Learn website structure and styling,None
+Responsive Web Design,Create websites that work on all devices,None
+React for Beginners,Learn React components, state
+Node.js Essentials,Server-side JavaScript made easy,None
+Algorithms Unlocked,Learn sorting, searching
+Data Structures in Practice,Implement stacks, queues
+Introduction to Machine Learning,Learn ML concepts and build simple models,None
+Deep Learning with Python,Neural networks, TensorFlow
+Competitive Programming,Improve coding skills and problem-solving speed,None
+Code Challenges and Exercises,Practice coding problems and algorithms,None
+Git & GitHub Essentials,Learn version control and collaboration,None
+SQL for Beginners,Query databases and manage data effectively,None
+NoSQL and MongoDB,Learn modern database solutions,None
+Mobile App Development,Build apps for iOS and Android,None
+Android Development Essentials,Learn to build Android apps with Java,None
+iOS Development Basics,Create apps for iPhone and iPad,None
+Programming Interviews,Prepare for coding interviews with practice problems,None
+Python Automation,Automate tasks and workflows using Python,None
+Java GUI Programming,Learn Swing and JavaFX,None
+Python GUI Development,Build apps with Tkinter and PyQt,None
+Game Development with Python,Make simple games using Pygame,None
+Unity for Beginners,Learn C# and Unity game development,None
+Algorithm Design Patterns,Advanced algorithm strategies and tricks,None
+Data Analysis with Python,Pandas, NumPy
+Web Scraping with Python,Collect data from websites efficiently,None
+Cybersecurity Basics,Learn the fundamentals of computer security,None
+Network Programming,Build networked applications and understand protocols,None
+Object-Oriented Programming Principles,Learn OOP concepts and best practices,None
+Design Patterns in Java,Learn common design patterns with examples,None
+Functional Programming Concepts,Introduction to FP with examples in multiple languages,None
+Big Data Fundamentals,Learn Hadoop, Spark
+Artificial Intelligence Basics,Get started with AI concepts and Python implementations,None
+Python for Finance,Learn to analyze financial data using Python,None
+Software Engineering Practices,Best practices for writing maintainable code,None
+Cloud Computing Basics,Introduction to cloud platforms and services,None
+DevOps Essentials,Learn CI/CD, Docker
+APIs and RESTful Services,Learn to build and consume APIs effectively,None
+Unit Testing with Python,Ensure your code works using testing frameworks,None
+Unit Testing with Java,Learn JUnit and test-driven development,None
+Version Control Best Practices,Using Git for collaboration and workflow,None
+Intro to Blockchain Programming,Build simple blockchain projects,None
+Mastering Minecraft,Learn survival, building
+Minecraft Redstone Guide,Create complex circuits and machines using Redstone,None
+Minecraft Building Tips,Improve your structures and aesthetics in Minecraft,None
+Minecraft Survival Handbook,Everything you need to survive and thrive,None
+Minecraft Mods Explained,Install and use mods to enhance your gameplay,None
+Minecraft Adventure Maps,Explore exciting custom maps created by the community,None
+Minecraft Farming Guide,Efficiently farm crops, mobs
+Minecraft Enchanting Secrets,Master enchanting to get the best gear,None
+Minecraft Villager Trading,Learn how to trade and profit from villagers,None
+Minecraft Combat Guide,Strategies for fighting mobs and players,None
+Minecraft Biome Exploration,Discover all biomes and their unique features,None
+Minecraft Redstone Automation,Automate farms and machines with Redstone,None
+Minecraft Creative Builds,Inspiration for amazing creative builds,None
+Minecraft Boss Battles,Defeat the Ender Dragon, Wither
+Minecraft Potion Brewing,Master potion making for survival and combat,None
+Minecraft Tips & Tricks,Hidden features and secrets in the game,None
+Minecraft Adventure Stories,Fictional adventures set in Minecraft worlds,None
+Minecraft Skyblock Guide,Conquer Skyblock challenges with efficiency,None
+Minecraft Hardcore Survival,Advanced strategies for hardcore mode,None
+Minecraft Building Challenges,Fun challenges to improve your building,None
+Minecraft Map Making,Create your own custom maps and adventures,None
+Minecraft Redstone Contraptions,Build machines, traps
+Minecraft Nether Exploration,Survive and thrive in the Nether,None
+Minecraft End Game Guide,Strategies for finishing the game and defeating bosses,None
+Minecraft Villager Farming,Maximize villager trading and farm efficiency,None
+Minecraft Creative Redstone,Advanced creative Redstone builds and contraptions,None
+Minecraft Server Management,Learn to run and manage your own server,None
+Minecraft Texture Packs,Customize the look of your world with textures,None
+Minecraft Mini Games,Create and play mini-games within Minecraft,None
+Minecraft Adventure Mods,Enhance exploration with custom mods,None
+Minecraft Realms Guide,Manage Minecraft Realms efficiently,None
+Minecraft Coding with Python,Automate and create mods using Python,None
+Minecraft Education Edition,Learn educational applications for Minecraft,None
+Minecraft PvP Strategies,Master player versus player combat,None
+Minecraft Building Tutorials,Step-by-step guides for complex builds,None
+Minecraft Redstone Machines,Design and build automatic machines,None
+Minecraft Exploration,Discover secrets, caves
+Minecraft Farm Design,Optimizing farms for resources and efficiency,None
+Minecraft Story Mode,Fictional stories and quests in the Minecraft universe,None
+Minecraft Survival Islands,Survive on custom island challenges,None
+Minecraft Hardcore Challenges,Unique challenges for hardcore survival,None
+Minecraft Sky Adventures,Travel the skies in creative and survival modes,None
+Minecraft Biome Builds,Creative builds inspired by different biomes,None
+Minecraft Mini Adventures,Short adventures for fun and practice,None
+Minecraft Legendary Builds,Epic creations from top Minecraft builders,None
+Minecraft Multiplayer Fun,Tips for playing with friends and servers,None
+Minecraft Crafting Guide,Master crafting recipes and techniques,None
+Minecraft Boss Strategies,Defeat powerful bosses effectively,None
+Minecraft Ender Adventures,Explore the End and defeat the Ender Dragon,None
+Mastering Python,Deep dive into Python programming and real-world applications,None
+Java Programming Essentials,Learn Java from basics to advanced,None
+Algorithms Unlocked,Understanding algorithms with clear examples,None
+Data Structures in Depth,Comprehensive guide to all major data structures,None
+Machine Learning Basics,Introduction to machine learning concepts and models,None
+Artificial Intelligence Concepts,Learn AI theory and practical applications,None
+Web Development with HTML & CSS,Build responsive and modern websites,None
+JavaScript for Beginners,Interactive web programming with JavaScript,None
+React.js Essentials,Learn React for dynamic web applications,None
+Django Web Development,Backend development using Django framework,None
+Clean Code Principles,Writing readable and maintainable code,None
+Git and GitHub Guide,Version control for developers,None
+Cybersecurity Basics,Protect systems and understand security threats,None
+Ethical Hacking Guide,Learn penetration testing safely,None
+Blockchain Fundamentals,Understand blockchain and cryptocurrencies,None
+Python Projects Handbook,Practical Python projects for learners,None
+Mastering Minecraft,Learn survival, building
+Minecraft Redstone Guide,Create complex circuits and machines using Redstone,None
+Minecraft Building Tips,Improve your structures and aesthetics in Minecraft,None
+Minecraft Adventure Maps,Explore exciting custom maps created by the community,None
+Minecraft Mods Explained,Install and use mods to enhance your gameplay,None
+Minecraft Survival Handbook,Everything you need to survive and thrive,None
+Cooking for Beginners,Start cooking easy and delicious meals,None
+Baking Made Simple,Master breads, cakes
+World History Compendium,Explore world history from ancient to modern,None
+Ancient Civilizations,Study Egypt, Rome
+Modern History Insights,Understand key events from 1900s to present,None
+Physics Concepts,Learn classical and modern physics,None
+Chemistry Essentials,Understand chemical reactions and theory,None
+Biology for Everyone,Explore life from cells to ecosystems,None
+Astronomy Wonders,Discover planets, stars
+Math Problem Solving,Sharpen your mathematical reasoning,None
+Statistics & Probability,Learn how to analyze and interpret data,None
+Psychology Fundamentals,Understand human behavior and mind,None
+Philosophy Insights,Explore the big questions of life,None
+Self-Discipline Strategies,Improve focus and productivity,None
+Mindfulness Practices,Techniques to stay present and calm,None
+Public Speaking Skills,Communicate clearly and confidently,None
+Personal Finance Guide,Manage money, budgeting
+Investing Basics,Learn stock markets and investment strategies,None
+Entrepreneurship Handbook,Start and grow your own business,None
+Project Management Essentials,Plan and execute projects efficiently,None
+Leadership Skills,Inspire and manage teams effectively,None
+Time Management Techniques,Make the most of your day,None
+Fitness & Workout Plans,Stay healthy with exercises and routines,None
+Yoga & Meditation,Enhance flexibility and mental peace,None
+Nutrition & Healthy Eating,Understand nutrients and meal planning,None
+Soccer Tactics,Learn techniques and team strategies,None
+Basketball Fundamentals,Skills and drills for basketball players,None
+Chess Strategies,Master openings, middlegame
+Fantasy Adventures,Embark on magical journeys in mythical lands,None
+Science Fiction Stories,Explore futuristic worlds and technology,None
+Mystery Novels,Unravel thrilling mysteries and crimes,None
+Detective Stories,Solve intriguing detective cases,None
+Survival Stories,Read gripping tales of survival in extreme conditions,None
+Travel Guides,Discover countries, cities
+Photography Techniques,Learn photography and composition,None
+Art & Drawing,Master drawing, painting
+Music Theory,Learn how music works and how to play instruments,None
+Guitar for Beginners,Step-by-step guide to learning guitar,None
+Piano Essentials,Learn piano basics and techniques,None
+Creative Writing,Improve storytelling and writing skills,None
+Poetry Collections,Explore classic and modern poetry,None
+Science Experiments,Fun and educational experiments for learners,None
+DIY Projects,Hands-on projects for home and school,None
+Gardening Tips,Learn to grow plants and maintain a garden,None
+Animal Care Guide,Take care of pets and domestic animals,None
+Travel Photography,Combine travel and photography skills,None
+Space Exploration,Learn about missions and discoveries in space,None
+Coding Challenges,Practice coding with real-world problems,None
+Game Development,Create games using different engines and tools,None
+Unity 3D Guide,Learn game development in Unity,None
+Unreal Engine Essentials,Build games and interactive experiences,None
+Introduction to Philosophy,Explore major philosophical theories and thinkers,None
+Ethics and Morality,Study human values and ethical dilemmas,None
+Cognitive Psychology,Understand perception, memory
+Neuroscience Basics,Learn how the brain functions and controls behavior,None
+Language Learning: Spanish,Comprehensive guide to learning Spanish,None
+Language Learning: French,Learn French with grammar and practice,None
+Language Learning: Japanese,Step-by-step Japanese learning guide,None
+World Cultures,Explore traditions and lifestyles around the globe,None
+Travel Hacking Guide,Tips for traveling cheaply and efficiently,None
+Digital Nomad Handbook,Work remotely while exploring the world,None
+Personal Branding,Build your professional identity and presence,None
+Social Media Marketing,Learn to market effectively on social platforms,None
+Stock Market for Beginners,Understand stocks, trading
+Cryptocurrency Investing,Learn crypto concepts and trading strategies,None
+Real Estate Basics,Introduction to property investment and management,None
+Startups and Innovation,Learn how to start and grow a tech company,None
+AI for Everyone,Understand AI concepts without coding,None
+Robotics Fundamentals,Introduction to building and programming robots,None
+Arduino Projects,Hands-on electronics and coding projects,None
+Raspberry Pi Guide,Explore Raspberry Pi and IoT projects,None
+Cybersecurity Advanced,Protect systems and learn advanced security,None
+Hacking Challenges,Ethical hacking exercises and techniques,None
+Blockchain Applications,Use blockchain beyond cryptocurrency,None
+Video Game Design,Learn theory and practice of game design,None
+Minecraft Survival Challenges,Master survival in tough Minecraft worlds,None
+Minecraft Creative Builds,Inspiration for amazing Minecraft constructions,None
+Minecraft Redstone Engineering,Advanced circuits and machines in Minecraft,None
+Minecraft Adventure Maps Review,Guide to popular community maps,None
+Minecraft Modding,Learn to code mods for Minecraft,None
+Cooking World Cuisine,Recipes from different countries,None
+Vegetarian Cooking,Delicious meat-free meal ideas,None
+Vegan Cooking,Plant-based recipes for every meal,None
+Bread and Pastry Masterclass,Bake like a professional,None
+Cake Decorating,Learn creative cake decoration techniques,None
+History of Science,Discover how science developed over time,None
+World Wars Explained,In-depth look at WWI and WWII,None
+Ancient Mythology,Legends and myths from all civilizations,None
+Modern Politics,Understand contemporary political systems,None
+Economics Principles,Learn basics of macro and microeconomics,None
+Sociology Insights,Study society, culture
+Environmental Science,Understand ecosystems and sustainability,None
+Climate Change Guide,Learn about causes, effects
+Astronomy Advanced,Study stars, galaxies
+Quantum Mechanics Basics,Introduction to quantum theory,None
+Genetics and DNA,Understand heredity and genetic science,None
+Mathematical Puzzles,Challenge your problem-solving skills,None
+Discrete Mathematics,Learn theory behind computer science,None
+Linear Algebra,Understand vectors, matrices
+Calculus Essentials,Master differential and integral calculus,None
+Statistics in Practice,Apply statistics to real-world problems,None
+Sports Psychology,Learn mental strategies for athletes,None
+Soccer Coaching,Advanced training methods for soccer,None
+Basketball Drills,Improve skills and teamwork,None
+Swimming Techniques,Perfect stroke, endurance
+Yoga Practices,Flexibility, breathing
+Meditation Guide,Step-by-step meditation techniques,None
+Creative Writing Workshop,Improve fiction and storytelling skills,None
+Poetry Analysis,Study classic and contemporary poems,None
+Short Story Collection,Explore fiction from different authors,None
+Fantasy Worlds,Adventures in magical realms,None
+Science Fiction Classics,Stories exploring technology and future,None
+Comics History,Learn the evolution of comics and superheroes,None
+Graphic Novels,Popular graphic novels explained,None
+Art History,From Renaissance to modern art,None
+Drawing Techniques,Master perspective, shading
+Painting Styles,Explore oil, watercolor
+Photography Composition,Take professional-level photos,None
+Music History,Learn genres, composers
+Guitar Techniques,Intermediate and advanced skills,None
+Piano Mastery,From beginner to advanced techniques,None
+Music Production Basics,Create music digitally,None
+Film Studies,Learn cinematic techniques and analysis,None
+Screenwriting Guide,Write scripts for movies and TV,None
+Acting Techniques,Improve performance and character portrayal,None
+Stagecraft Basics,Theatrical production techniques,None
+Public Speaking,Confidently present in front of audiences,None
+Debate Skills,Master argumentation and persuasion,None
+Creative Coding,Build artistic projects with code,None
+Game Programming,Learn Unity and Unreal Engine,None
+App Development Basics,Create Android and iOS apps,None
+Data Science Essentials,Analyze data and gain insights,None
+Big Data Guide,Work with large datasets effectively,None
+Machine Learning Projects,Hands-on ML coding challenges,None
+Artificial Intelligence Projects,Build intelligent applications,None
+Deep Learning Basics,Neural networks and advanced AI,None
+Cloud Computing,Understand cloud platforms and deployment,None
+IoT Projects,Connect devices and create smart systems,None
+Smart Home Automation,Control devices at home intelligently,None
+Drone Technology,Learn to program and fly drones,None
+Minecraft Engineering Projects,Complex builds and mods,None
+Minecraft Coding Lessons,Learn to code within Minecraft,None
+Minecraft Server Management,Run and maintain Minecraft servers,None
+Minecraft Roleplay Adventures,Guides and stories for roleplay,None
+Minecraft Challenges Collection,Fun survival and building challenges,None
+The Art of Negotiation,Master negotiation skills in business and life,None
+Critical Thinking Skills,Improve reasoning and decision making,None
+Memory Techniques,Boost recall with proven strategies,None
+Speed Reading,Learn to read faster while understanding,None
+Emotional Intelligence,Understand and manage emotions,None
+Leadership Principles,Guide to effective leadership,None
+Time Management Strategies,Optimize your daily routines,None
+Personal Finance 101,Managing money, budgeting
+Investing in Index Funds,Simple strategies for long-term growth,None
+Retirement Planning,How to plan for financial security,None
+The Psychology of Habits,How habits form and how to change them,None
+Mindfulness Meditation,Practice awareness and calm,None
+Stress Management Techniques,Reduce stress in daily life,None
+Conflict Resolution,Handle disputes effectively,None
+Public Relations Essentials,Managing image and communications,None
+Journalism Basics,Learn reporting, writing
+Creative Nonfiction Writing,Storytelling with factual content,None
+Modern Poetry Collection,Contemporary poets and themes,None
+Classic Novels Compilation,Famous literature from all time,None
+Dystopian Fiction,Exploring societies gone wrong,None
+Cyberpunk Adventures,Futuristic technology-driven stories,None
+Mystery & Thriller,Page-turning suspenseful tales,None
+Fantasy Epics,Magical worlds and heroic quests,None
+Romance Stories,Love stories from classics to modern,None
+Detective Chronicles,Solving crimes and mysteries,None
+Graphic Novel Collection,Popular comics and storylines,None
+Superhero Histories,Learn origins of major characters,None
+Manga Series Collection,Popular Japanese comic series,None
+Animation Design,Create animation from concept to screen,None
+Game Art Techniques,Design characters, worlds
+Pixel Art Guide,Create pixel-style art and games,None
+3D Modeling Basics,Learn Blender and 3D design,None
+Photography Techniques,Master lighting, composition
+Travel Photography,Take amazing photos while traveling,None
+Film Direction,Learn directing for cinema,None
+Screenwriting Techniques,Write scripts for movies,None
+Stage Acting,Improve performance on stage,None
+Voice Acting Guide,Master voice modulation and expression,None
+Dance Styles,Learn ballet, jazz
+Martial Arts Training,Techniques, forms
+Yoga & Meditation,Combine physical and mental practice,None
+Fitness for Teens,Workouts and routines for young adults,None
+Nutrition & Dieting,Balanced diets and healthy habits,None
+Healthy Cooking,Quick and nutritious meal ideas,None
+World Cooking Recipes,Traditional dishes from every continent,None
+Vegan & Vegetarian Cuisine,Plant-based cooking inspiration,None
+Baking for Beginners,Bread, cakes
+Advanced Baking Techniques,Professional baking tips,None
+Coding Python Projects,Fun Python exercises and applications,None
+Java Programming Guide,Learn Java from basics to advanced,None
+Algorithms Explained,Sorting, searching
+Data Structures,Core concepts for efficient coding,None
+Web Development Projects,HTML, CSS
+Full Stack Development,Frontend and backend projects,None
+Mobile App Programming,Android and iOS app tutorials,None
+Artificial Intelligence Basics,Intro to AI concepts,None
+Machine Learning Guide,Supervised and unsupervised learning,None
+Deep Learning Projects,Neural networks and applications,None
+Computer Networks,Understanding how data moves,None
+Cybersecurity Essentials,Protect computers and networks,None
+Linux Command Line,Master shell and system commands,None
+Database Management,SQL and NoSQL database projects,None
+Cloud Computing Basics,AWS, Azure
+Blockchain Fundamentals,Distributed ledger and crypto,None
+Cryptography Techniques,Encryption, decryption
+Ethical Hacking Projects,Learn hacking in a safe environment,None
+Arduino Robotics Projects,Hands-on electronics coding,None
+IoT Smart Home,Connect devices for automation,None
+Raspberry Pi Projects,Build small computing projects,None
+Minecraft Redstone Tutorials,Engineering with Redstone circuits,None
+Minecraft Modding Guide,Create mods and custom content,None
+Minecraft Adventure Map Design,Build maps for players,None
+Minecraft Survival Challenges,Test survival skills in worlds,None
+Minecraft Building Projects,Design impressive structures,None
+Minecraft Server Management,Run and maintain servers,None
+Minecraft Roleplay Guide,Storytelling and creative gameplay,None
+Minecraft PvP Strategies,Improve player vs player skills,None
+Minecraft Resource Pack Guide,Customize textures and visuals,None
+Minecraft Machine Creations,Automation and complex builds,None
+Minecraft Coding with Python,Code mods and tools for Minecraft,None
+Minecraft Mapmaking,Create and share exciting maps,None
+Minecraft Community Events,Organize and participate,None
+Photography Travel,Best spots for capturing landscapes,None
+World History Compendium,Events shaping civilizations,None
+Ancient Civilizations,Mesopotamia, Egypt
+Medieval Europe,Life and politics in the middle ages,None
+Renaissance Art,Artists and innovations of the era,None
+Industrial Revolution,Changes in technology and society,None
+Modern History,20th century conflicts and progress,None
+American History,Founding, expansion
+European History,Countries, wars
+Asian History,China, Japan
+African History,Kingdoms, colonialism
+Oceanography Basics,Learn about oceans and ecosystems,None
+Marine Biology,Study aquatic life and habitats,None
+Astronomy for Beginners,Stars, planets
+Astrophysics Guide,Advanced concepts in space science,None
+Rocket Science Introduction,Learn physics of flight and propulsion,None
+Space Missions History,From Apollo to Mars exploration,None
+Star Maps and Constellations,Navigate the night sky,None
+Weather and Meteorology,Learn about climate and forecasts,None
+Climate Change Research,Science and solutions,None
+Geology and Earth Science,Study rocks, minerals
+Volcanoes and Earthquakes,Natural disasters explained,None
+Ocean Exploration,Discover life under the sea,None
+Mythology & Legends,Stories from cultures worldwide,None
+Fairy Tales Collection,Classic and modern tales,None
+Folklore & Fables,Stories passed down generations,None
+Urban Legends,Modern myths and stories,None
+Popular Science,Accessible explanations of science topics,None
+Tech Innovations,History and future of technology,None
+Space Tech Projects,Build models and experiments,None
+Artificial Life Simulation,Learn coding for simulations,None
+Computer Graphics,Rendering and visualization techniques,None
+Video Game AI,Programming intelligent NPCs,None
+Board Game Design,Create strategic tabletop games,None
+Chess Strategies,Improve your chess skills,None
+Puzzle Collection,Logic, math
+Riddles and Brain Teasers,Sharpen your mind with challenges,None
+Magic Tricks for Beginners,Learn simple illusions and tricks,None
+Origami Projects,Paper folding and creative art,None
+DIY Crafts,Fun and easy crafts projects,None
+Knitting & Crochet,Handmade clothing and accessories,None
+Model Building,Hobbyist construction and scale models,None
+Painting Landscapes,Techniques for nature painting,None
+Portrait Drawing,Human features and proportions,None
+Calligraphy Techniques,Beautiful handwriting styles,None
+Music Theory,Understanding notes, scales
+Guitar Chords & Tabs,Play popular songs on guitar,None
+Piano Exercises,Practice routines for improvement,None
+Violin Techniques,Learn to play the violin,None
+Singing & Vocal Training,Improve pitch and technique,None
+Songwriting Guide,Compose lyrics and melodies,None
+Film Criticism,Analyze movies and storytelling,None
+Theatre Productions,Stagecraft and performance,None
+Animation Software,Learn industry-standard tools,None
+Photography Composition,Framing, lighting
+Digital Painting,Learn Photoshop and Procreate,None
+Comic Book Writing,Create stories and scripts,None
+Manga Drawing,Learn Japanese-style art,None
+History of Comics,Origins and evolution,None
+Superhero Analysis,Study characters and stories,None
+Fantasy Mapmaking,Draw worlds and cities,None
+Science Experiments,Fun hands-on projects,None
+Chemistry Basics,Atoms, reactions
+Physics Essentials,Forces, motion
+Biology Fundamentals,Cells, organisms
+Mathematics for Kids,Fun number games and concepts,None
+Statistics for Beginners,Analyze and interpret data,None
+Game Theory,Strategy and decision making,None
+Probability & Combinatorics,Understand chance and outcomes,None
+Advanced Python Programming,Deep dive into Python classes, decorators
+Data Science with Python,Exploring pandas, NumPy
+Machine Learning Algorithms,Supervised, unsupervised
+Deep Learning with TensorFlow,Build neural networks and models,None
+Natural Language Processing,Text processing, sentiment analysis
+Computer Vision Projects,Image recognition and OpenCV tutorials,None
+Algorithms in Java,Sorting, searching
+Data Structures in Java,Linked lists, trees
+Java Concurrency,Multithreading and parallel processing,None
+Full Stack JavaScript,Node.js, Express
+Web Security Essentials,Prevent hacking, SQL injection
+Blockchain Development,Smart contracts and Ethereum DApps,None
+Cryptography Algorithms,Encryption methods and cryptanalysis,None
+Game Development with Unity,2D and 3D game projects,None
+Unreal Engine Guide,Advanced game mechanics and blueprints,None
+Raspberry Pi Electronics,IoT, sensors
+Arduino Advanced Projects,Automation, drones
+Minecraft Redstone Engineering,Complex machines and automated farms,None
+Minecraft Command Blocks,Custom commands and interactive worlds,None
+Minecraft Mod Development,Forge and Fabric modding tutorials,None
+Minecraft Adventure Maps,Story-driven map creation and design,None
+Minecraft Server Plugins,Bukkit and Spigot plugin development,None
+Artificial Intelligence Research,State-of-the-art AI techniques,None
+Reinforcement Learning,Training AI with rewards and simulation,None
+Genetic Algorithms,Optimization using evolutionary computation,None
+Robotics Programming,Control algorithms, sensors
+Autonomous Vehicles Basics,Programming self-driving cars,None
+Computer Networks Deep Dive,Routers, switches
+Network Security,Firewalls, VPNs
+Operating Systems Internals,Processes, threads
+Linux Kernel Programming,Modifying and building the kernel,None
+Databases Advanced,Normalization, indexing
+SQL Query Optimization,Advanced query design and analysis,None
+NoSQL Databases,MongoDB, Redis
+Cloud Infrastructure,AWS, Azure
+DevOps Practices,CI/CD pipelines and automation,None
+Software Engineering Principles,Design patterns, architecture
+Agile Methodology,Scrum, Kanban
+Project Management Techniques,Gantt charts, risk management
+Digital Marketing Advanced,SEO, analytics
+Graphic Design Mastery,Typography, branding
+3D Modeling Advanced,Blender and Maya for professionals,None
+Animation Advanced,Rigging, motion capture
+Music Production,Sound design, mixing
+Film Editing Techniques,Advanced Adobe Premiere and Final Cut Pro,None
+Photography Advanced,HDR, long exposure
+AI for Healthcare,Medical imaging and predictive analytics,None
+Bioinformatics Programming,Genome sequencing and data analysis,None
+Chemistry Lab Techniques,Organic synthesis and experiments,None
+Physics Simulations,Classical and quantum mechanics,None
+Mathematics Advanced,Linear algebra, calculus
+Statistics and Probability,Advanced concepts and applications,None
+Econometrics Models,Data-driven economic analysis,None
+Behavioral Psychology,Human behavior theories and experiments,None
+Cognitive Science,Memory, learning
+Neuroscience Research,Brain structure and function,None
+Philosophy Advanced,Logic, ethics
+Political Science Studies,Global politics, policies
+World History Deep Dive,Ancient to modern civilizations,None
+Geography Advanced,Physical and human geography analysis,None
+Environmental Science,Climate modeling, sustainability
+Astronomy Advanced,Exoplanets, telescopes
+Astrophysics Research,Dark matter, black holes
+Marine Biology Advanced,Coral reefs, ocean ecology
+Engineering Mechanics,Statics, dynamics
+Mechanical Engineering Projects,Design and prototyping,None
+Electrical Engineering Advanced,Circuits, signals
+Civil Engineering Design,Urban planning, bridges
+Architecture Studies,Design theory, history
+Urban Planning Advanced,City modeling and zoning,None
+Psychotherapy Techniques,Cognitive behavioral therapy and methods,None
+Counseling Psychology,Advanced techniques for therapists,None
+Nutrition Science,Macronutrients, micronutrients
+Sports Science,Performance analysis, training
+Martial Arts Theory,Philosophy, strategy
+Chess Advanced Strategies,Openings, middlegame tactics
+Board Game Theory,Mathematics of games and strategy,None
+RPG Design,World-building, storylines
+Creative Writing Advanced,Plot development, character arcs
+Science Fiction Writing,Speculative tech and world-building,None
+Fantasy Writing,Magic systems, lore
+Historical Fiction Research,Accurate portrayal of events,None
+Comic Writing Advanced,Panels, pacing
+Manga Storytelling,Japanese comic narrative techniques,None
+Game Narrative Design,Dialogue, quests
+Educational Technology,Using tech for teaching and learning,None
+Online Course Creation,Instructional design and tools,None
+AI in Education,Adaptive learning and analytics,None
+Python Crash Course,Beginner to advanced Python programming with projects,None
+Automate the Boring Stuff with Python,Practical Python scripts for daily tasks,None
+Effective Python,59 specific ways to write better Python code,None
+Fluent Python,Advanced Python programming and idiomatic usage,None
+Python Tricks,Patterns, tips
+Python Data Analysis,Using pandas and NumPy for data manipulation,None
+Python Machine Learning,Supervised and unsupervised learning techniques,None
+Python Deep Learning,Neural networks with TensorFlow and PyTorch,None
+Python for Finance,Financial modeling and analysis,None
+Python Web Development,Django, Flask
+Python Testing and QA,Unit tests, integration tests
+Python Concurrency,Asyncio, threading
+Python Networking,Socket programming and network automation,None
+Java Programming Basics,Core Java syntax and object-oriented principles,None
+Java Design Patterns,Common patterns for scalable applications,None
+Java Advanced Topics,Generics, streams
+Java Concurrency,Threads, synchronization
+Java Web Development,Servlets, JSP
+Java Enterprise Applications,Enterprise architecture and microservices,None
+Java Security,Encryption, authentication
+Java Testing,Junit, Mockito
+Java Game Development,2D and 3D game projects in Java,None
+Java Algorithms,Sorting, searching
+C Programming Mastery,Memory management and pointers,None
+C++ Programming Advanced,STL, templates
+C++ Game Development,2D and 3D projects with SFML/Unreal,None
+C++ Algorithms,Graphs, dynamic programming
+C# Programming,Core C# syntax and object-oriented concepts,None
+C# Unity Game Development,2D/3D games with Unity engine,None
+C# .NET Applications,Windows apps and web services,None
+JavaScript Fundamentals,ES6+, DOM manipulation
+JavaScript Advanced,Promises, async/await
+Node.js Backend Development,Server-side JavaScript applications,None
+React.js Frontend Development,SPA and component architecture,None
+Vue.js Framework,Reactive frontend apps and component design,None
+Angular Framework,Full-featured frontend apps,None
+TypeScript Programming,Static typing and advanced JavaScript,None
+Web Security Essentials,XSS, CSRF
+Full Stack JavaScript,MEAN, MERN
+Algorithms and Data Structures,Classic problems and solutions,None
+Advanced Algorithms,Dynamic programming, greedy
+Competitive Programming,Problem-solving strategies and contests,None
+LeetCode Mastery,Solutions for top interview problems,None
+Data Structures in Practice,Linked lists, trees
+Graph Theory and Applications,Graphs, networks
+Machine Learning Mastery,Python, scikit-learn
+Deep Learning Advanced,Neural networks, CNNs
+Reinforcement Learning,Training agents with rewards,None
+AI and Robotics,Autonomous agents and robot programming,None
+Blockchain Development,Smart contracts and DApp creation,None
+Solidity Programming,Ethereum smart contracts,None
+DevOps with Docker,Containers, orchestration
+Kubernetes Guide,Deployment, scaling
+AWS Cloud Development,Serverless, Lambda
+Azure Cloud Essentials,Cloud services and application hosting,None
+Google Cloud Platform,Compute Engine, AI
+Cybersecurity Basics,Hacking prevention and ethical hacking,None
+Penetration Testing,Tools, techniques
+Cryptography for Developers,Encryption, hashing
+Database Design,SQL, normalization
+NoSQL Databases,MongoDB, Redis
+Mobile App Development,Android and iOS apps with best practices,None
+Flutter Development,Dart and cross-platform app development,None
+React Native Projects,Building mobile apps with React,None
+Game Development with Unreal,Blueprints, C++
+Game Development with Unity,3D games, physics
+Computer Graphics Programming,OpenGL, shaders
+Networking Programming,Sockets, protocols
+Parallel and Concurrent Programming,Multithreading and async programming,None
+Embedded Systems Programming,Arduino, Raspberry Pi
+Rust Programming,Memory-safe systems programming,None
+Go Programming,Concurrency and web services,None
+Scala Programming,Functional programming and Spark,None
+Haskell Programming,Pure functional programming and theory,None
+Kotlin Development,Android apps and functional programming,None
+Swift Programming,iOS apps and advanced Swift concepts,None
+MATLAB Programming,Math, simulations
+R Programming,Statistics, data visualization
+Data Engineering,ETL pipelines and big data processing,None
+Big Data Analysis,Hadoop, Spark
+AI for Games,Pathfinding, decision-making
+Computer Vision with OpenCV,Image processing and object detection,None
+Natural Language Processing with Python,Text analysis and chatbots,None
+Software Architecture,Microservices, monoliths
+Design Patterns,Creational, structural
+Clean Code,Best practices for maintainable software,None
+Refactoring,Improving existing code and design,None
+Test Driven Development,Writing tests first and automation,None
+Continuous Integration and Deployment,Automation pipelines for software,None
+Programming Interviews,Preparation for coding interviews,None
+Hackathons Guide,Rapid prototyping and project strategy,None
