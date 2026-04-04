@@ -150,4 +150,33 @@ class manageMent {
         }
         return false;
     }
+     void changeBookOwner(String title, String newOwner) throws IOException {
+            Path path = Path.of("books.txt");
+
+            // Read all lines
+            ArrayList<String> newLines = new ArrayList<>();
+            String[] lines = libraryString.split("\n");
+
+            for (String line : lines) {
+                String[] formatted = line.split(",");
+
+                // Safety check
+                if (formatted.length >= 3) {
+
+                    // If this is the book we want
+                    if (formatted[0].equals(title)) {
+                        formatted[2] = newOwner; // change owner
+                    }
+
+                    // Rebuild line
+                    newLines.add(formatted[0] + "," + formatted[1] + "," + formatted[2]);
+                }
+            }
+
+            // Write everything back to file
+            Files.write(path, newLines);
+
+            // 🔥 Update memory so your app stays in sync
+            libraryString = String.join("\n", newLines);
+        }
 }
