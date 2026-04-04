@@ -472,6 +472,11 @@ class Main {
             // Click action
             get.addActionListener(e -> {
                 // dataManage.checkoutBook(item[0]); // implement this in manageMent
+                try {
+                    dataManage.changeBookOwner(item[0],user);
+                } catch (IOException ex) {
+                    System.out.println("FAILURE U FAILED");
+                }
                 window.dispose();
                 searchPage(keywords);
             });
